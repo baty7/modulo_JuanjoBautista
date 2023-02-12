@@ -2,6 +2,16 @@
 
 from odoo import models, fields, api
 
+
+
+class modulo3_modeloActores(models.Model):
+     _name = 'modulo3.modelo'
+     _description = 'Modulo Actores de un VideoClub'
+
+     name = fields.Char(string='Nombre y Apellidos del actor ',help='Nombre completo',required=True)
+     year = fields.Char(string='Año de Nacimiento',help='Año',size=4)
+     description =  fields.Text(string='Descripcion del actor')
+
 class modulo2_modeloCategorias(models.Model):
      _name = 'modulo2.modelo'
      _description = 'Modulo Categorias de un VideoClub'

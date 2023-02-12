@@ -1,6 +1,17 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="modulo3_modeloActores_tree">
+      <field name="name">Vista arbol de los actores del VideoClub</field>
+      <field name="model">modulo3.modelo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="year"/>
+          <field name="description"/>
+        </tree>
+      </field>
+    </record>
 
     <record model="ir.ui.view" id="modulo2_modeloCategorias_tree">
       <field name="name">Vista arbol de categoria de VideoClub</field>
@@ -42,22 +53,12 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="modulo_sge.action_server">
-      <field name="name">moduloSGE server</field>
-      <field name="model_id" ref="model_modulo_sge_modulo_sge"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
+    <record model="ir.actions.act_window" id="modulo3_modeloActores_action_window">
+      <field name="name">Accion de ventana para el modelo Actores</field>
+      <field name="res_model">modulo3.modelo</field>
+      <field name="view_mode">tree,form</field>
     </record>
--->
+
 
     <!-- Top menu item -->
 
@@ -67,6 +68,7 @@
 
     <menuitem name="Peliculas" id="Modulo_modeloPelicula_menu_1" parent="modulo_modeloPelicula_menu_root"/>
     <menuitem name="Categorias" id="modulo2_modeloCategorias_menu_1" parent="modulo_modeloPelicula_menu_root"/>
+    <menuitem name="Actores" id="modulo3_modeloActores_menu_1" parent="modulo_modeloPelicula_menu_root"/>
 
     <!-- actions -->
 
@@ -74,8 +76,10 @@
               action="modulo_modeloPelicula_action_window"/>
 
     <menuitem name="Ver Categorias" id="modulo2_modeloCategorias_menu_1_list" parent="modulo2_modeloCategorias_menu_1"
-              action="modulo2_modeloCategorias_action_window"/>         
-              
+              action="modulo2_modeloCategorias_action_window"/>   
+
+    <menuitem name="Ver Actores" id="modulo3_modeloActores_menu_1_list" parent="modulo3_modeloActores_menu_1"
+              action="modulo3_modeloActores_action_window"/>         
 
   </data>
 </odoo>
