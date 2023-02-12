@@ -43,10 +43,11 @@ class modulo_modeloPelicula(models.Model):
         ondelete='restrict',
     )
     
-    def _una_funcion(self):
-        ventas_aleatorias = random.uniform(1000000.0,5000000.0)
+    @api.depends('name') 
+    def _una_funcion(self): 
         for record in self:
-            record.sales = ventas_aleatorias
+            record.sales = random.uniform(1000000.0,5000000.0)
+
 
 
 #description = fields.Text()
