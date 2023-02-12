@@ -35,6 +35,7 @@ class modulo_modeloPelicula(models.Model):
     photo = fields.Image(max_with=250, max_height=250)
     last_login = fields.Datetime(
         string='Ultimo acceso',
+        default = lambda self: fields.Datetime.now(),
         required=True
     )
     categoria_id = fields.Many2one(
