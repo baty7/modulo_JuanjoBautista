@@ -34,23 +34,8 @@
           <field name="reserved_movie"/>
           <field name="sales"/>
           <field name="categoria_id"/>
+          <field name="last_login"/>
         </tree>
-      </field>
-    </record>
-
-    <record model="ir.ui.view" id="modulo_modeloPelicula_form">
-      <field name="name">Vista arbol de pelicula</field>
-      <field name="model">modulo1.modelo</field>
-      <field name="arch" type="xml">
-        <form>
-          <field name="name"/>
-          <field name="year"/>
-          <field name="reserved_movie"/>
-          <field name="sales"/>
-          <field name="categoria_id"/>
-          <field name="photo"/>
-          <field name="last_login"/>   
-        </form>
       </field>
     </record>
 
