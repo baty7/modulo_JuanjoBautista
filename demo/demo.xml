@@ -31,7 +31,7 @@
             <field name="reserved_movie">true</field>
             <field name="sales"></field>
             <field name="last_login"></field>
-            <field name="categoria_id" ref="modulo2.categorias2"></field>
+            <field name="categoria_id" ref="categorias1"></field>
           </record>
 <!--
           <record id="object1" model="modulo_sge.modulo_sge">
