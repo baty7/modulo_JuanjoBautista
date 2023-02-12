@@ -61,7 +61,7 @@
 
     <!-- Top menu item -->
 
-    <menuitem name="Modulo_modeloPelicula" id="modulo_modeloPelicula_menu_root"/>
+    <menuitem name="Videoclub" id="modulo_modeloPelicula_menu_root"/>
 
     <!-- menu categories -->
 
