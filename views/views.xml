@@ -22,12 +22,12 @@
         <form>
           <sheet string="Modulo Actores de un VideoClub" modifiers="{}">
             <group col="4" modifiers="{}">
-              <field name="name" modifiers="{'required':true}" id="name"/>
-              <field name="year" modifiers="{}" id="year"/>
-              <newline modifiers="{}"/>
-              <field name="description" colspan="4" modifiers="{}" id="description"/>
-              <newline modifiers="{}"/>
-              <separator modifiers="{}"/>
+              <field name="name" modifiers="{'required':true}" id="name" />
+              <field name="year" modifiers="{}" id="year" />
+              <newline modifiers="{}" />
+              <field name="description" colspan="4" modifiers="{}" id="description" />
+              <newline modifiers="{}" />
+              <separator modifiers="{}" />
             </group>
           </sheet>
         </form>
