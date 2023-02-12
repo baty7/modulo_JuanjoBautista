@@ -54,11 +54,9 @@ class modulo_modeloPelicula(models.Model):
     def _check_(self):
         for record in self:
             if self.search([('name', '=', record.name)], limit=1) != record:
-                print(
-                    "La pelicula ya esta en la base de datos, no se puede volver a repetir")
-                raise ValidationError("error, pelicula repetida")
+                raise ValidationError("Error, pelicula repetida")
 
-
+ 
 #description = fields.Text()
 
 # @api.depends('value')
