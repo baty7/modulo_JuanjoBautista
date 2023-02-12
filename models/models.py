@@ -44,6 +44,9 @@ class modulo_modeloPelicula(models.Model):
         comodel_name='modulo2.modelo',
         ondelete='restrict',
     )
+    def accion_boton(self):
+        for record in self:
+            record.write({'name':""})
 
     @api.depends('name')
     def _una_funcion(self):
