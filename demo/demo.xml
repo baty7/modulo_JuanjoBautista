@@ -24,15 +24,6 @@
             <field name="name">Aventura</field>
             <field name="description">Peliculas animadas</field>
           </record>
-
-          <record id="peliculas1" model="modulo1.modelo">
-            <field name="name">Titanic</field>
-            <field name="year">1996</field>
-            <field name="reserved_movie">true</field>
-            <field name="sales"></field>
-            <field name="last_login"></field>
-            <field name="categoria_id" ref="categorias1"></field>
-          </record>
 <!--
           <record id="object1" model="modulo_sge.modulo_sge">
             <field name="name">Object 1</field>
