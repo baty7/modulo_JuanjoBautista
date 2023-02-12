@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+import random
 
 
 class modulo3_modeloActores(models.Model):
@@ -41,10 +42,11 @@ class modulo_modeloPelicula(models.Model):
         comodel_name='modulo2.modelo',
         ondelete='restrict',
     )
-
+    
     def _una_funcion(self):
         for record in self:
-            record.sales = '135000'
+            ventas_aleatorias = random.uniform(1000000.0,5000000.0)
+            record.sales = ventas_aleatorias
 
 
 #description = fields.Text()
