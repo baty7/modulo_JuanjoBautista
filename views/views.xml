@@ -106,6 +106,20 @@
       </field>
     </record>
 
+    <!-- VISTA QUE NOS CREA EL REPORT DE PELICULAS -->
+
+    <record id="InformePeliculas" model="ir.actions.report">
+      <field name="name">Peliculas</field>
+      <field name="model">modulo1.modelo</field>
+      <field name="report_type">qweb-pdf</field>
+      <field name="report_name">report_modulo1.modelo</field>
+      <field name="report_file">report_modulo1.modelo</field>
+      <field name="attachment">'Reporte_Peliculas' + fields.Date.today().strftime('%Y-%m-%d') + '.pdf'</field>
+      <field name="binding_model_id" ref="modulo1_modelo"/>
+      <field name="binding_type">report</field>
+  </record>
+
+
 
     <!-- actions opening views on models -->
 
