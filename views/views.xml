@@ -39,6 +39,33 @@
       </field>
     </record>
 
+    <record model="ir.ui.view" id="modulo_modeloPelicula_form">
+      <field name="name">Vista formulario de pelicula</field>
+      <field name="model">modulo1.modelo</field>
+      <field name="arch" type="xml">
+
+      <form>
+        <sheet string="Modulo Pelicula de un VideoClub">
+          <group col="4">
+            <field name="name" modifiers="{'required':true}" id="name"/>
+            <field name="year" modifiers="{}" id="year"/>
+            <field name="reserved_movie" modifiers="{}" id="reserved_movie"/>
+            <field name="sales" modifiers="{'readonly':true}" id="sales"/>
+            <field name="photo" modifiers="{}" id="photo"/>
+            <field name="last_login" modifiers="{'required':true}" id="last_login"/>
+            <field name="categoria_id" can_create="true" can_write="true" modifiers="{}" id="categoria_id"/>
+            <separator/>
+          </group>
+        </sheet>
+      </form>
+
+      </field>
+    </record>
+
+
+    
+
+
 
     <!-- actions opening views on models -->
 

@@ -16,8 +16,8 @@ class modulo2_modeloCategorias(models.Model):
      _name = 'modulo2.modelo'
      _description = 'Modulo Categorias de un VideoClub'
 
-     name = fields.Selection(string='Categoria', selection =[('valor1', 'Comedia'), 
-     ('valor2', 'Drama'),('valor3','Terror'),('valor4','Ciencia Ficcion'),('valor5','Aventura')])
+     name = fields.Selection(string='Categoria', selection =[('Comedia', 'Comedia'), 
+     ('Drama', 'Drama'),('Terror','Terror'),('Ciencia Ficcion','Ciencia Ficcion'),('Aventura','Aventura')])
      description =  fields.Text(string='Descripcion')
 
 class modulo_modeloPelicula(models.Model):
