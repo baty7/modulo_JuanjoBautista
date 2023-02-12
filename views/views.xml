@@ -1,0 +1,81 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="modulo2_modeloCategorias_tree">
+      <field name="name">Vista arbol de categoria de VideoClub</field>
+      <field name="model">modulo2.modelo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="description"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="modulo_modeloPelicula_tree">
+      <field name="name">Vista arbol de pelicula</field>
+      <field name="model">modulo1.modelo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="year"/>
+          <field name="reserved_movie"/>
+          <field name="sales"/>
+          <field name="categoria_id"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="modulo_modeloPelicula_action_window">
+      <field name="name">Accion de ventana para el modelo Pelicula</field>
+      <field name="res_model">modulo1.modelo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="modulo2_modeloCategorias_action_window">
+      <field name="name">Accion de ventana para el modelo Categorias</field>
+      <field name="res_model">modulo2.modelo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="modulo_sge.action_server">
+      <field name="name">moduloSGE server</field>
+      <field name="model_id" ref="model_modulo_sge_modulo_sge"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+
+    <menuitem name="Modulo_modeloPelicula" id="modulo_modeloPelicula_menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Peliculas" id="Modulo_modeloPelicula_menu_1" parent="modulo_modeloPelicula_menu_root"/>
+    <menuitem name="Categorias" id="modulo2_modeloCategorias_menu_1" parent="modulo_modeloPelicula_menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="Ver Peliculas" id="Modulo_modeloPelicula_menu_1_list" parent="Modulo_modeloPelicula_menu_1"
+              action="modulo_modeloPelicula_action_window"/>
+
+    <menuitem name="Ver Categorias" id="modulo2_modeloCategorias_menu_1_list" parent="modulo2_modeloCategorias_menu_1"
+              action="modulo2_modeloCategorias_action_window"/>         
+              
+
+  </data>
+</odoo>
