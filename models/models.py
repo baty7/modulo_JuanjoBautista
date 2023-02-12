@@ -44,8 +44,8 @@ class modulo_modeloPelicula(models.Model):
     )
     
     def _una_funcion(self):
+        ventas_aleatorias = random.uniform(1000000.0,5000000.0)
         for record in self:
-            ventas_aleatorias = random.uniform(1000000.0,5000000.0)
             record.sales = ventas_aleatorias
 
 
