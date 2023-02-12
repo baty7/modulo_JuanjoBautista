@@ -2,6 +2,7 @@
 
 from odoo import models, fields, api
 import random
+from odoo.exceptions import UserError, ValidationError
 
 
 class modulo3_modeloActores(models.Model):
@@ -35,7 +36,7 @@ class modulo_modeloPelicula(models.Model):
     photo = fields.Image(max_with=250, max_height=250)
     last_login = fields.Datetime(
         string='Ultimo acceso',
-        default = lambda self: fields.Datetime.now(),
+        default=lambda self: fields.Datetime.now(),
         required=True
     )
     categoria_id = fields.Many2one(
@@ -43,12 +44,19 @@ class modulo_modeloPelicula(models.Model):
         comodel_name='modulo2.modelo',
         ondelete='restrict',
     )
-    
-    @api.depends('name') 
-    def _una_funcion(self): 
-        for record in self:
-            record.sales = random.uniform(1000000.0,5000000.0)
 
+    @api.depends('name')
+    def _una_funcion(self):
+        for record in self:
+            record.sales = random.uniform(1000000.0, 5000000.0)
+
+    @api.constrains('name')
+    def _check_(self):
+        for record in self:
+            if self.search([('name', '=', record.name)], limit=1) != record:
+                print(
+                    "La pelicula ya esta en la base de datos, no se puede volver a repetir")
+                raise ValidationError("error, pelicula repetida")
 
 
 #description = fields.Text()
