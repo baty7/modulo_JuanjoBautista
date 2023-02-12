@@ -27,7 +27,7 @@ class modulo_modeloPelicula(models.Model):
      name = fields.Char(string='Título de la pelicula',help='Título',required=True)
      year = fields.Char(string='Año',help='Año',size=4)
      reserved_movie = fields.Boolean(string='Pelicula Alquilada')
-     sales = fields.Integer(string='Total Ventas',compute='_una_funcion')
+     sales = fields.char(string='Total Ventas',compute='_una_funcion')
      photo = fields.Image(max_with =250,max_height=250) 
      last_login = fields.Datetime(
          string='Ultimo acceso',
@@ -38,9 +38,10 @@ class modulo_modeloPelicula(models.Model):
          comodel_name='modulo2.modelo',
          ondelete='restrict',
      )
+
      def _una_funcion(self):
-          for record in self:
-               record.sales = '135000'
+         for record in self:
+             record.sales = '135000'
 
 
 
