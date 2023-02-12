@@ -106,7 +106,9 @@
       </field>
     </record>
 
-    <!-- VISTA QUE NOS CREA EL REPORT DE PELICULAS -->
+    <!-- VISTA QUE NOS CREA EL REPORT DE PELICULAS 
+
+      ESTE APARTADO NO CONSIGO SACARLO
 
     <record id="InformePeliculas" model="ir.actions.report">
       <field name="name">Peliculas</field>
@@ -117,7 +119,10 @@
       <field name="attachment">'Reporte_Peliculas' + fields.Date.today().strftime('%Y-%m-%d') + '.pdf'</field>
       <field name="binding_model_id" ref="modulo1_modelo"/>
       <field name="binding_type">report</field>
-  </record>
+  </record>  
+
+      -->
+
 
 
 
