@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="modulo1_categoria_modulo1" model="ir.module.category">
+        <field name="name">Modulo1</field>
+        <field name="description">Ayuda a gestionar el modulo1</field>
+        <field name="sequence">100</field>
+    </record>
+    <record id="modulo1_users" model="res.groups">
+        <field name="name">modulo1_users</field>
+        <field name="category_id" ref="modulo1.categoria_modulo1"/>
+        <field name="users" eval="[(4, ref('base.group_user'))]" />
+    </record>
+
+    <record id="modulo1_admin" model="res.groups">
+        <field name="name">modulo1_admin</field>
+        <field name="category_id" ref="modulo1.categoria_modulo1"/>
+        <field name="users" eval="[(4, ref('base.user_admin'))]" />
+    </record>
+
+</odoo>
