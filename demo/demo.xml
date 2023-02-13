@@ -24,6 +24,18 @@
             <field name="name">Aventura</field>
             <field name="description">Peliculas animadas</field>
           </record>
+          <record id="categorias3" model="modulo2.modelo">
+            <field name="name">Terror</field>
+            <field name="description">Peliculas de mucho miedo</field>
+          </record>
+          <record id="categorias4" model="modulo2.modelo">
+            <field name="name">Ciencia Ficcion</field>
+            <field name="description">Peliculas que no son reales</field>
+          </record>
+          <record id="categorias5" model="modulo2.modelo">
+            <field name="name">Comedia</field>
+            <field name="description">Pa' partirse de risa</field>
+          </record>
 <!--
           <record id="object1" model="modulo_sge.modulo_sge">
             <field name="name">Object 1</field>
