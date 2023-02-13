@@ -21,21 +21,38 @@
             <table>
               <thead>
                 <tr>
-                  <th>Nombre de categoría</th>
+                  <th>Titulo de la pelicula</th>
+                  <br/>
                   <th>Total de ventas</th>
+                  <br/>
+                  <th>Pelicula Reservada</th>
+                  <br/>
                   <th>Año</th>
+                  <br/>
+                  <th>Ultimo Acceso</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>
-                    <t t-esc="doc.categoria_id" />
+                    <t t-esc="doc.name" />
+                    <br/>
                   </td>
                   <td>
                     <t t-esc="doc.sales" />
+                    <br/>
                   </td>
                   <td>
                     <t t-esc="doc.year" />
+                    <br/>
+                  </td>
+                  <td>
+                    <t t-esc="doc.reserved_movie" />
+                    <br/>
+                  </td>
+                  <td>
+                    <t t-esc="doc.last_login" />
+                    <br/>
                   </td>
                 </tr>
               </tbody>
