@@ -1,45 +1,52 @@
 <odoo>
 
-  <record id="modulo1_report_modelo" model="ir.actions.report" >
-    <field name="name" >Listado de Peliculas </field>
+  <record id="modulo1_report_modelo" model="ir.actions.report">
+    <field name="name">Listado de Peliculas </field>
     <field name="model">modulo1.modelo</field>
     <field name="report_name">modulo_JuanjoBautista.report_formulario_pelicula</field>
     <field name="report_file">modulo_JuanjoBautista.report_formulario_pelicula</field>
     <field name="report_type">qweb-pdf</field>
-    <field name="binding_model_id" ref="model_modulo1_modelo"/>
+    <field name="binding_model_id" ref="model_modulo1_modelo" />
   </record>
-    
-    
 
-    <template id="report_formulario_pelicula">
-      <t t-call="web.html_container">
-        <t t-foreach="docs" t-as="doc">
-          <t t-call="web.internal_layout">
-            <div class="page">
-              <h2><t t-esc="doc.name"/></h2>    
-              <table>
-                <thead>
-                  <tr>
-                    <th>Nombre de categoría</th>
-                    <th>Total de ventas</th>
-                    <th>Año</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><t t-esc="doc.categoria_id"/></td>
-                    <td><t t-esc="doc.sales"/></td>
-                    <td><t t-esc="doc.year"/></td>
-                  </tr> 
-                </tbody>
-              </table>
-            </div>
-          </t>
-        </>t-foreach>
+
+  <template id="report_formulario_pelicula">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="doc">
+        <t t-call="web.internal_layout">
+          <div class="page">
+            <h2>
+              <t t-esc="doc.name" />
+            </h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre de categoría</th>
+                  <th>Total de ventas</th>
+                  <th>Año</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <t t-esc="doc.categoria_id" />
+                  </td>
+                  <td>
+                    <t t-esc="doc.sales" />
+                  </td>
+                  <td>
+                    <t t-esc="doc.year" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </t>
       </t>
-    </template>
-  
-    <!--
+    </t>
+  </template>
+
+  <!--
         <template id="listing">
           <ul>
             <li t-foreach="objects" t-as="object">
@@ -59,5 +66,5 @@
           </dl>
         </template>
 -->
- 
+
 </odoo>
