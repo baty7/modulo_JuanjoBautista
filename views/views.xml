@@ -110,17 +110,17 @@
     </record>
 
 
-    <record id="modulo1" model="ir.actions.report">
-      <field name="name">Reporte de Peliculas</field>
-      <field name="model">modulo1.modelo</field>
-      <field name="report_type">qweb-pdf</field>
-      <field name="report_name">modulo1.modelo_report</field>
-      <field name="report_file">modulo1.modelo_report</field>
-      <field name="template_id" ref="modulo1.modelo_report_template"/>
-      <field name="attachment_use" eval="True"/>
-      <field name="attachment">'Reporte_Peliculas'</field>
-      
-  </record>  
+
+
+  <record id="modulo1_report_modelo" model="ir.actions.report" >
+    <field name="name" >Listado de Peliculas </field>
+    <field name="model">modulo1.modelo</field>
+    <field name="report_name">peliculas.report_form_view</field>
+    <field name="report_file">peliculas.report_form_view</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="binding_model_id" ref="model_modelo1_modulo"/>
+    <!-- Se puede añadir print_report_name, paperformat_id-->
+  </record>
 
       -->
 
