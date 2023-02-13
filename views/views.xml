@@ -110,18 +110,7 @@
     </record>
 
 
-
-    
- <!-- <record id="modulo1_report_modelo" model="ir.actions.report" >
-    <field name="name" >Listado de Peliculas </field>
-    <field name="model">modulo1.modelo</field>
-    <field name="report_name">modulo1.report_formulario_pelicula</field>
-    <field name="report_file">modulo1.report_formulario_pelicula</field>
-    <field name="report_type">qweb-pdf</field>
-    <field name="binding_model_id" ref="model_modulo1_modelo"/>
-  </record>
-    -->
-  
+ 
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="modulo_modeloPelicula_action_window">
