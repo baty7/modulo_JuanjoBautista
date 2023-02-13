@@ -115,10 +115,10 @@
   <record id="modulo1_report_modelo" model="ir.actions.report" >
     <field name="name" >Listado de Peliculas </field>
     <field name="model">modulo1.modelo</field>
-    <field name="report_name">peliculas.report_form_view</field>
-    <field name="report_file">peliculas.report_form_view</field>
+    <field name="report_name">peliculas.vista_arbol_pelicula</field>
+    <field name="report_file">peliculas.vista_arbol_pelicula</field>
     <field name="report_type">qweb-pdf</field>
-    <field name="binding_model_id" ref="model_modelo1_modulo"/>
+    <field name="binding_model_id" ref="model_modulo1_modelo"/>
     <!-- Se puede añadir print_report_name, paperformat_id-->
   </record>
 
