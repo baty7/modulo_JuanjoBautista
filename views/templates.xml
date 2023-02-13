@@ -22,14 +22,13 @@
               <thead>
                 <tr>
                   <th>Titulo de la pelicula</th>
-                  <br/>
+                  <br/><br/>
                   <th>Total de ventas</th>
-                  <br/>
-                  <th>Pelicula Reservada</th>
-                  <br/>
+                  <br/><br/>
                   <th>Año</th>
-                  <br/>
+                  <br/><br/>
                   <th>Ultimo Acceso</th>
+                  <br/><br/>
                 </tr>
               </thead>
               <tbody>
@@ -45,11 +44,7 @@
                   <td>
                     <t t-esc="doc.year" />
                     <br/>
-                  </td>
-                  <td>
-                    <t t-esc="doc.reserved_movie" />
-                    <br/>
-                  </td>
+                  </td>             
                   <td>
                     <t t-esc="doc.last_login" />
                     <br/>
