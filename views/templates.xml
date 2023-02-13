@@ -1,6 +1,23 @@
 <odoo>
-    <data>
-<!--
+  <data>
+    
+    <template id="modulo1.modelo_report_template">
+      <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="doc">
+          <t t-call="web.internal_layout">
+            <div class="page">
+              <h2><t t-esc="doc.name"/></h2>
+              <p>
+                <t t-esc="doc.description"/>
+              </p>
+            </div>
+          </t>
+        </t>
+      </t>
+    </template>
+
+
+    <!--
         <template id="listing">
           <ul>
             <li t-foreach="objects" t-as="object">
@@ -20,5 +37,5 @@
           </dl>
         </template>
 -->
-    </data>
+  </data>
 </odoo>

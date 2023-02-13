@@ -109,19 +109,17 @@
       </field>
     </record>
 
-    <!-- VISTA QUE NOS CREA EL REPORT DE PELICULAS 
 
-      ESTE APARTADO NO CONSIGO SACARLO
-
-    <record id="InformePeliculas" model="ir.actions.report">
-      <field name="name">Peliculas</field>
+    <record id="modulo1.modelo_report_id" model="ir.actions.report">
+      <field name="name">Reporte de Peliculas</field>
       <field name="model">modulo1.modelo</field>
       <field name="report_type">qweb-pdf</field>
-      <field name="report_name">report_modulo1.modelo</field>
-      <field name="report_file">report_modulo1.modelo</field>
-      <field name="attachment">'Reporte_Peliculas' + fields.Date.today().strftime('%Y-%m-%d') + '.pdf'</field>
-      <field name="binding_model_id" ref="modulo1_modelo"/>
-      <field name="binding_type">report</field>
+      <field name="report_name">modulo1.modelo_report</field>
+      <field name="report_file">modulo1.modelo_report</field>
+      <field name="template_id" ref="modulo1.modelo_report_template"/>
+      <field name="attachment_use" eval="True"/>
+      <field name="attachment">'Reporte_Peliculas'</field>
+      
   </record>  
 
       -->
