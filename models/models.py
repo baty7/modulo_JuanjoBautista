@@ -55,10 +55,10 @@ class modulo_modeloPelicula(models.Model):
     @api.depends('cantidad')
     def _disponible_(self):
         for record in self:
-            if cantidad > 0:
-                reserved_movie = True
+            if record.cantidad > 0:
+                record.reserved_movie = True
             else:
-                reserved_movie = False 
+                record.reserved_movie = False 
 
     @api.depends('name')
     def _una_funcion(self):
