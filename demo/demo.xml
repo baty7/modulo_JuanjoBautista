@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+          <record id="actores1" model="modulo3.modelo">
+            <field name="name">Virginia Cervantes Vera</field>
+            <field name="year">1997</field>
+            <field name="description">Actriz top mundial</field>
+          </record>
+          <record id="actores2" model="modulo3.modelo">
+            <field name="name">Pedro Luque Moreno</field>
+            <field name="year">1991</field>
+            <field name="description">Actor secundario</field>
+          </record>
+          <record id="actores3" model="modulo3.modelo">
+            <field name="name">Pepe Fuertes Gallego</field>
+            <field name="year">1996</field>
+            <field name="description">Actor principal</field>
+          </record>
+
+          <record id="categorias1" model="modulo2.modelo">
+            <field name="name">Drama</field>
+            <field name="description">Peliculas con drama</field>
+          </record>
+          <record id="categorias2" model="modulo2.modelo">
+            <field name="name">Aventura</field>
+            <field name="description">Peliculas animadas</field>
+          </record>
+          <record id="categorias3" model="modulo2.modelo">
+            <field name="name">Terror</field>
+            <field name="description">Peliculas de mucho miedo</field>
+          </record>
+          <record id="categorias4" model="modulo2.modelo">
+            <field name="name">Ciencia Ficcion</field>
+            <field name="description">Peliculas que no son reales</field>
+          </record>
+          <record id="categorias5" model="modulo2.modelo">
+            <field name="name">Comedia</field>
+            <field name="description">Pa' partirse de risa</field>
+          </record>
+<!--
+          <record id="object1" model="modulo_sge.modulo_sge">
+            <field name="name">Object 1</field>
+            <field name="value">10</field>
+          </record>
+
+          <record id="object2" model="modulo_sge.modulo_sge">
+            <field name="name">Object 2</field>
+            <field name="value">20</field>
+          </record>
+
+          <record id="object3" model="modulo_sge.modulo_sge">
+            <field name="name">Object 3</field>
+            <field name="value">30</field>
+          </record>
+
+          <record id="object4" model="modulo_sge.modulo_sge">
+            <field name="name">Object 4</field>
+            <field name="value">40</field>
+          </record>
+-->
+    </data>
+</odoo>

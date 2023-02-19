@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_modulo1_modelo_admin_acl,access_modulo1_modelo_admin_default,model_modulo1_modelo,modulo1_admin,1,1,1,1
+access_modulo2_modelo_admin_acl,access_modulo2_modelo_admin_default,model_modulo2_modelo,modulo1_admin,1,1,1,1
+access_modulo3_modelo_admin_acl,access_modulo3_modelo_admin_default,model_modulo3_modelo,modulo1_admin,1,1,1,1
+
+access_modulo1_modelo_acl,access_modulo1_modelo_default,model_modulo1_modelo,modulo1_users,1,0,0,0
+access_modulo2_modelo_acl,access_modulo2_modelo_default,model_modulo2_modelo,modulo1_users,1,0,0,0
+access_modulo3_modelo_acl,access_modulo3_modelo_default,model_modulo3_modelo,modulo1_users,1,0,0,0
+
+
+

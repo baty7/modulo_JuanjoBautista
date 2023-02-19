@@ -1,0 +1,82 @@
+<odoo>
+
+  <record id="modulo1_report_modelo" model="ir.actions.report">
+    <field name="name">Listado de Peliculas </field>
+    <field name="model">modulo1.modelo</field>
+    <field name="report_name">modulo_JuanjoBautista.report_formulario_pelicula</field>
+    <field name="report_file">modulo_JuanjoBautista.report_formulario_pelicula</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="binding_model_id" ref="model_modulo1_modelo" />
+  </record>
+
+
+  <template id="report_formulario_pelicula">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="doc">
+        <t t-call="web.internal_layout">
+          <div class="page">
+            <h2>
+              <t t-esc="doc.name" />
+            </h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Titulo de la pelicula</th>
+                  <br/><br/>
+                  <th>Total de ventas</th>
+                  <br/><br/>
+                  <th>Año</th>
+                  <br/><br/>
+                  <th>Ultimo Acceso</th>
+                  <br/><br/>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <t t-esc="doc.name" />
+                    <br/>
+                  </td>
+                  <td>
+                    <t t-esc="doc.sales" />
+                    <br/>
+                  </td>
+                  <td>
+                    <t t-esc="doc.year" />
+                    <br/>
+                  </td>             
+                  <td>
+                    <t t-esc="doc.last_login" />
+                    <br/>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </t>
+      </t>
+    </t>
+  </template>
+
+  <!--
+        <template id="listing">
+          <ul>
+            <li t-foreach="objects" t-as="object">
+              <a t-attf-href="#{ root }/objects/#{ object.id }">
+                <t t-esc="object.display_name"/>
+              </a>
+            </li>
+          </ul>
+        </template>
+        <template id="object">
+          <h1><t t-esc="object.display_name"/></h1>
+          <dl>
+            <t t-foreach="object._fields" t-as="field">
+              <dt><t t-esc="field"/></dt>
+              <dd><t t-esc="object[field]"/></dd>
+            </t>
+          </dl>
+        </template>
+-->
+
+</odoo>

@@ -1,0 +1,165 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!-- VISTAS DEL MODELO 3 ACTORES -->
+    <record model="ir.ui.view" id="modulo3_modeloActores_tree">
+      <field name="name">Vista arbol de los actores del VideoClub</field>
+      <field name="model">modulo3.modelo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="year" />
+          <field name="description" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="modulo3_modeloActores_form">
+      <field name="name">Vista formulario de Actores</field>
+      <field name="model">modulo3.modelo</field>
+      <field name="arch" type="xml">
+
+        <form>
+          <sheet string="Modulo Actores de un VideoClub" modifiers="{}">
+            <group col="4" modifiers="{}">
+              <field name="name" modifiers="{'required':true}" id="name" />
+              <field name="year" modifiers="{}" id="year" />
+              <newline modifiers="{}" />
+              <field name="description" colspan="4" modifiers="{}" id="description" />
+              <newline modifiers="{}" />
+              <separator modifiers="{}" />
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- VISTAS DEL MODELO 2 CATEGORIAS -->
+    <record model="ir.ui.view" id="modulo2_modeloCategorias_tree">
+      <field name="name">Vista arbol de categoria de VideoClub</field>
+      <field name="model">modulo2.modelo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="description" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="modulo2_modeloCategorias_form">
+      <field name="name">Vista formulario de categorias</field>
+      <field name="model">modulo2.modelo</field>
+      <field name="arch" type="xml">
+
+        <form>
+          <sheet string="Modulo Categorias de un VideoClub" modifiers="{}">
+            <group col="4" modifiers="{}">
+              <field name="name" modifiers="{}" id="name" />
+              <newline modifiers="{}" />
+              <field name="description" colspan="4" modifiers="{}" id="description" />
+              <newline modifiers="{}" />
+              <separator modifiers="{}" />
+            </group>
+          </sheet>
+        </form>
+
+      </field>
+    </record>
+
+    <!-- VISTAS DEL MODELO 1 PELICULAS -->
+    <record model="ir.ui.view" id="modulo_modeloPelicula_tree">
+      <field name="name">Vista arbol de pelicula</field>
+      <field name="model">modulo1.modelo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="year" />
+          <field name="reserved_movie" />
+          <field name="cantidad" />
+          <field name="sales" />
+          <field name="categoria_id" />
+          <field name="last_login" />
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="modulo_modeloPelicula_form">
+      <field name="name">vista_formulario_pelicula</field>
+      <field name="model">modulo1.modelo</field>
+      <field name="arch" type="xml">
+
+        <form>
+          <header>
+            <button name="accion_boton" string = "Borrar nombre" type="object" class="oe_highlight"/>
+          </header>
+          <sheet string="Modulo Pelicula de un VideoClub">
+            <group col="4">
+              <field name="name" modifiers="{'required':true}" id="name" />
+              <field name="year" modifiers="{}" id="year" />
+              <field name="reserved_movie" modifiers="{}" id="reserved_movie" />
+              <field name="sales" modifiers="{'readonly':true}" id="sales" />
+              <field name="cantidad" modifiers="{}" id="cantidad" />
+              <field name="photo" modifiers="{}" id="photo" />
+              <field name="last_login" modifiers="{'required':true}" id="last_login" />
+              <field name="categoria_id" can_create="true" can_write="true" modifiers="{}"
+                id="categoria_id" />
+              <separator />
+            </group>
+          </sheet>
+        </form>
+
+      </field>
+    </record>
+
+
+ 
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="modulo_modeloPelicula_action_window">
+      <field name="name">Accion de ventana para el modelo Pelicula</field>
+      <field name="res_model">modulo1.modelo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="modulo2_modeloCategorias_action_window">
+      <field name="name">Accion de ventana para el modelo Categorias</field>
+      <field name="res_model">modulo2.modelo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="modulo3_modeloActores_action_window">
+      <field name="name">Accion de ventana para el modelo Actores</field>
+      <field name="res_model">modulo3.modelo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="Videoclub" id="modulo_modeloPelicula_menu_root" />
+
+    <!-- menu categories -->
+
+    <menuitem name="Peliculas" id="Modulo_modeloPelicula_menu_1"
+      parent="modulo_modeloPelicula_menu_root" />
+    <menuitem name="Categorias" id="modulo2_modeloCategorias_menu_1"
+      parent="modulo_modeloPelicula_menu_root" />
+    <menuitem name="Actores" id="modulo3_modeloActores_menu_1"
+      parent="modulo_modeloPelicula_menu_root" />
+
+    <!-- actions -->
+
+    <menuitem name="Ver Peliculas" id="Modulo_modeloPelicula_menu_1_list"
+      parent="Modulo_modeloPelicula_menu_1"
+      action="modulo_modeloPelicula_action_window" />
+
+    <menuitem name="Ver Categorias" id="modulo2_modeloCategorias_menu_1_list"
+      parent="modulo2_modeloCategorias_menu_1"
+      action="modulo2_modeloCategorias_action_window" />
+
+    <menuitem name="Ver Actores" id="modulo3_modeloActores_menu_1_list"
+      parent="modulo3_modeloActores_menu_1"
+      action="modulo3_modeloActores_action_window" />
+
+  </data>
+</odoo>
