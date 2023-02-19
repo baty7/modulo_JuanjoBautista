@@ -96,18 +96,38 @@
           </header>
           <widget name="web_ribbon" title="Reservado" attrs="{'invisible': [('reserved_movie', '==', True)]}" modifiers="{'invisible':['reserved_movie','==',True]" />
           <sheet string="Modulo Pelicula de un VideoClub">
+            <group name = "cabecera">\
+              <div>
+                <label for='name'>Titulo de la Pelicula</label>
+                <h1>
+                  <field name="name" modifiers="{'required':true}" id="name" />
+                </h1>
+                <label for='year'>Año de la Pelicula</label>
+                <h2>
+                  <field name="year" modifiers="{}" id="year" />
+                </h2>
+                <label for='categoria_id'>Categoria de la Pelicula</label>
+                <h3>
+                  <field name="categoria_id" can_create="true" can_write="true" modifiers="{}"
+                id="categoria_id" />
+                </h3>
+                <label for='actor_id'>Actor de la Pelicula</label>
+                <h4>
+                  <field name="actor_id" can_create="true" can_write="true" modifiers="{}"
+                id="actor_id" />
+                </h4>          
+              </div>
+              <field name="photo" nolabel='1' widget='image' class='oe_right' options="{' preview_image':' image_medium',' size':[100,100]}" />
+            </group>
+
             <group col="4">
-              <field name="name" modifiers="{'required':true}" id="name" />
-              <field name="year" modifiers="{}" id="year" />
+            
               <field name="reserved_movie" modifiers="{}" id="reserved_movie" />
               <field name="sales" modifiers="{'readonly':true}" id="sales" />
               <field name="cantidad" modifiers="{}" id="cantidad" />
-              <field name="photo" nolabel='1' widget='image' class='oe_right' options="{' preview_image':' image_medium',' size':[100,100]}" />
               <field name="last_login" modifiers="{'required':true}" id="last_login" />
-              <field name="categoria_id" can_create="true" can_write="true" modifiers="{}"
-                id="categoria_id" />
-                <field name="actor_id" can_create="true" can_write="true" modifiers="{}"
-                id="actor_id" />
+              
+        
               <separator />
             </group>
           </sheet>
