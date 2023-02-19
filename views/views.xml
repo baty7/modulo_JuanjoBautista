@@ -75,7 +75,7 @@
           <field name="name" />
           <field name="year" />
           <field name="reserved_movie" />
-          <field name="cantidad1" />
+          <field name="cantidad" />
           <field name="sales" />
           <field name="categoria_id" />
           <field name="last_login" />
