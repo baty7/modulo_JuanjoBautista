@@ -71,11 +71,11 @@
       <field name="name">Vista arbol de pelicula</field>
       <field name="model">modulo1.modelo</field>
       <field name="arch" type="xml">
-        <tree>
+        <tree String = "Listado de Peliculas" decoration-danger="reserved_movie  != True" decoration-success = "reserved_movie == True"
+        decoration-warning="cantidad &lt; 5">
           <field name="name" />
           <field name="year" />
-          <field name="reserved_movie" decoration-danger="reserved_movie  != True" decoration-success = "reserved_movie == True"
-          decoration-warning="cantidad &lt; 5" />
+          <field name="reserved_movie"/>
           <field name="cantidad"/>
           <field name="sales" />
           <field name="categoria_id" />
