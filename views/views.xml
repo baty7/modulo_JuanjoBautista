@@ -120,14 +120,13 @@
               <field name="photo" nolabel='1' widget='image' class='oe_right' options="{' preview_image':' image_medium',' size':[100,100]}" />
             </group>
 
-            <group col="4">
+            <group>
             
               <field name="reserved_movie" modifiers="{}" id="reserved_movie" />
               <field name="sales" modifiers="{'readonly':true}" id="sales" />
               <field name="cantidad" modifiers="{}" id="cantidad" />
               <field name="last_login" modifiers="{'required':true}" id="last_login" />
-              
-        
+          
               <separator />
             </group>
           </sheet>
