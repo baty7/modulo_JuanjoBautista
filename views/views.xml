@@ -76,6 +76,7 @@
           <field name="name" />
           <field name="year" />
           <field name="reserved_movie"/>
+          <field name="actor_id"/>
           <field name="cantidad"/>
           <field name="sales" />
           <field name="categoria_id" />
@@ -104,6 +105,8 @@
               <field name="last_login" modifiers="{'required':true}" id="last_login" />
               <field name="categoria_id" can_create="true" can_write="true" modifiers="{}"
                 id="categoria_id" />
+                <field name="actor_id" can_create="true" can_write="true" modifiers="{}"
+                id="actor_id" />
               <separator />
             </group>
           </sheet>

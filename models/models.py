@@ -48,6 +48,12 @@ class modulo_modeloPelicula(models.Model):
         comodel_name='modulo2.modelo',
         ondelete='restrict',
     )
+    actor_id = fields.Many2many(
+        string='Actores',
+        comodel_name='modulo3.modelo',
+        relation='model.peliculas_actores',
+    )
+    
     def accion_boton(self):
         for record in self:
             record.write({'name':""})
