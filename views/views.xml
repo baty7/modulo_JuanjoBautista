@@ -96,25 +96,23 @@
           </header>
           <widget name="web_ribbon" title="Reservado" attrs="{'invisible': [('reserved_movie', '==', True)]}" modifiers="{'invisible':['reserved_movie','==',True]" />
           <sheet string="Modulo Pelicula de un VideoClub">
-            <group name = "cabecera">\
+            <group name = "cabecera">
               <div>
-                <label for='name'>Titulo de la Pelicula</label>
+                <label for='name' class= "oe_edit_only"/>
                 <h1>
-                  <field name="name" modifiers="{'required':true}" id="name" />
+                  <field name="name" placeholder = "Titulo de las peliculas" nolabel = "1" />
                 </h1>
-                <label for='year'>Año de la Pelicula</label>
+                <label for='year' class = "oe_edit_only"/>
                 <h2>
-                  <field name="year" modifiers="{}" id="year" />
+                  <field name="year" placeholder = "Año de las peliculas" nolabel = "1" />
                 </h2>
-                <label for='categoria_id'>Categoria de la Pelicula</label>
+                <label for='categoria_id' class ="oe_edit_only" />
                 <h3>
-                  <field name="categoria_id" can_create="true" can_write="true" modifiers="{}"
-                id="categoria_id" />
+                  <field name="categoria_id" placeholder = "Categoria de las peliculas" nolabel = "1"  />
                 </h3>
-                <label for='actor_id'>Actor de la Pelicula</label>
+                <label for='actor_id' class ="oe_edit_only" />
                 <h4>
-                  <field name="actor_id" can_create="true" can_write="true" modifiers="{}"
-                id="actor_id" />
+                  <field name="actor_id" placeholder = "Actor/es de las peliculas" nolabel = "1"/>
                 </h4>          
               </div>
               <field name="photo" nolabel='1' widget='image' class='oe_right' options="{' preview_image':' image_medium',' size':[100,100]}" />
