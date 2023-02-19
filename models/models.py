@@ -31,8 +31,12 @@ class modulo_modeloPelicula(models.Model):
     name = fields.Char(string='Título de la pelicula',
                        help='Título', required=True)
     year = fields.Char(string='Año', help='Año', size=4)
-    reserved_movie = fields.Boolean(string='Pelicula Alquilada')
+    reserved_movie = fields.Boolean(string='Pelicula Disponible',store = 'true',compute = '_disponible_')
+
     sales = fields.Integer(string='Total Ventas', compute='_una_funcion')
+
+    cantidad = fields.Integer( string='Cantidad',help='Cantidad de discos')
+
     photo = fields.Image(max_with=250, max_height=250)
     last_login = fields.Datetime(
         string='Ultimo acceso',
@@ -47,6 +51,14 @@ class modulo_modeloPelicula(models.Model):
     def accion_boton(self):
         for record in self:
             record.write({'name':""})
+    
+    @api.depends('cantidad')
+    def _disponible_(self):
+        for record in self:
+            if cantidad > 0:
+                reserved_movie = True
+            else:
+                reserved_movie = False 
 
     @api.depends('name')
     def _una_funcion(self):

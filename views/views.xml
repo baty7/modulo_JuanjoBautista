@@ -75,6 +75,7 @@
           <field name="name" />
           <field name="year" />
           <field name="reserved_movie" />
+          <field name="cantidad" />
           <field name="sales" />
           <field name="categoria_id" />
           <field name="last_login" />
@@ -97,6 +98,7 @@
               <field name="year" modifiers="{}" id="year" />
               <field name="reserved_movie" modifiers="{}" id="reserved_movie" />
               <field name="sales" modifiers="{'readonly':true}" id="sales" />
+              <field name="cantidad" modifiers="{}" id="cantidad" />
               <field name="photo" modifiers="{}" id="photo" />
               <field name="last_login" modifiers="{'required':true}" id="last_login" />
               <field name="categoria_id" can_create="true" can_write="true" modifiers="{}"
