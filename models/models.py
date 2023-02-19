@@ -51,7 +51,7 @@ class modulo_modeloPelicula(models.Model):
     actor_id = fields.Many2many(
         string='Actores',
         comodel_name='modulo3.modelo',
-        relation='model.peliculas_actores',
+        ondelete='restrict'
     )
     
     def accion_boton(self):
