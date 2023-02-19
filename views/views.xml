@@ -74,8 +74,9 @@
         <tree>
           <field name="name" />
           <field name="year" />
-          <field name="reserved_movie" />
-          <field name="cantidad" />
+          <field name="reserved_movie" decoration-danger="reserved_movie  != True" decoration-success = "reserved_movie == True"
+          decoration-warning="cantidad &lt; 5" />
+          <field name="cantidad"/>
           <field name="sales" />
           <field name="categoria_id" />
           <field name="last_login" />
